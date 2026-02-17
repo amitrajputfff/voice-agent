@@ -149,8 +149,8 @@ npm run watch
 ### Basic (Hosted Mode)
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/liaplus/voice-widget@1.0.0/cdn/dist/voice-widget.css">
-<script src="https://cdn.jsdelivr.net/gh/liaplus/voice-widget@1.0.0/cdn/dist/voice-widget.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/amitrajputfff/voice-agent@1.0.0/dist/voice-widget.css">
+<script src="https://cdn.jsdelivr.net/gh/amitrajputfff/voice-agent@1.0.0/dist/voice-widget.min.js"></script>
 <script>
   LiaPlusVoice.init({ apiBase: 'https://liaplus.com/api' });
 </script>
@@ -224,8 +224,8 @@ All SDK functionality is bundled into the final widget.
 ### CDN URLs
 
 ```
-https://cdn.jsdelivr.net/gh/[USERNAME]/voice-widget@1.0.0/dist/voice-widget.min.js
-https://cdn.jsdelivr.net/gh/[USERNAME]/voice-widget@1.0.0/dist/voice-widget.css
+https://cdn.jsdelivr.net/gh/amitrajputfff/voice-agent@1.0.0/dist/voice-widget.min.js
+https://cdn.jsdelivr.net/gh/amitrajputfff/voice-agent@1.0.0/dist/voice-widget.css
 ```
 
 See `GITHUB_SETUP.md` for detailed instructions.
@@ -279,7 +279,8 @@ See `GITHUB_SETUP.md` for detailed instructions.
    - jsDelivr will pick up automatically
 
 3. **Update documentation**
-   - Replace [USERNAME] with actual GitHub username
+   - All USERNAME placeholders replaced with: amitrajputfff
+   - Repository: https://github.com/amitrajputfff/voice-agent
    - Test CDN URLs
 
 ---

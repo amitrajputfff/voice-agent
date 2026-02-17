@@ -37,7 +37,7 @@ cd cdn
 git init
 
 # Add GitHub remote
-git remote add origin https://github.com/[USERNAME]/voice-widget.git
+git remote add origin https://github.com/amitrajputfff/voice-agent.git
 
 # Create .gitignore
 cat > .gitignore << 'EOF'
@@ -96,20 +96,20 @@ After publishing a release, your files will be available via jsDelivr:
 
 ```html
 <!-- CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/[USERNAME]/voice-widget@latest/dist/voice-widget.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/amitrajputfff/voice-agent@latest/dist/voice-widget.css">
 
 <!-- JavaScript -->
-<script src="https://cdn.jsdelivr.net/gh/[USERNAME]/voice-widget@latest/dist/voice-widget.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/amitrajputfff/voice-agent@latest/dist/voice-widget.min.js"></script>
 ```
 
 ### Specific Version (Recommended for production)
 
 ```html
 <!-- CSS -->
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/[USERNAME]/voice-widget@1.0.0/dist/voice-widget.css">
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/amitrajputfff/voice-agent@1.0.0/dist/voice-widget.css">
 
 <!-- JavaScript -->
-<script src="https://cdn.jsdelivr.net/gh/[USERNAME]/voice-widget@1.0.0/dist/voice-widget.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/amitrajputfff/voice-agent@1.0.0/dist/voice-widget.min.js"></script>
 ```
 
 ### With SRI (Subresource Integrity) - Extra Security
@@ -131,11 +131,11 @@ Use in HTML:
 
 ```html
 <link rel="stylesheet" 
-      href="https://cdn.jsdelivr.net/gh/[USERNAME]/voice-widget@1.0.0/dist/voice-widget.css"
+      href="https://cdn.jsdelivr.net/gh/amitrajputfff/voice-agent@1.0.0/dist/voice-widget.css"
       integrity="sha384-[HASH]"
       crossorigin="anonymous">
 
-<script src="https://cdn.jsdelivr.net/gh/[USERNAME]/voice-widget@1.0.0/dist/voice-widget.min.js"
+<script src="https://cdn.jsdelivr.net/gh/amitrajputfff/voice-agent@1.0.0/dist/voice-widget.min.js"
         integrity="sha384-[HASH]"
         crossorigin="anonymous"></script>
 ```
@@ -201,7 +201,7 @@ Host example pages:
 4. Save
 
 Examples will be available at:
-`https://[USERNAME].github.io/voice-widget/basic.html`
+`https://amitrajputfff.github.io/voice-agent/basic.html`
 
 ## Step 8: Add License
 
@@ -242,19 +242,18 @@ git push
 Test jsDelivr is working:
 
 1. Wait 5-10 minutes after creating release
-2. Visit: `https://cdn.jsdelivr.net/gh/[USERNAME]/voice-widget@1.0.0/dist/voice-widget.min.js`
+2. Visit: `https://cdn.jsdelivr.net/gh/amitrajputfff/voice-agent@1.0.0/dist/voice-widget.min.js`
 3. Should see minified JavaScript
 
-Check stats: `https://www.jsdelivr.com/package/gh/[USERNAME]/voice-widget`
+Check stats: `https://www.jsdelivr.com/package/gh/amitrajputfff/voice-agent`
 
 ## Step 10: Update Documentation
 
 Update all documentation with your actual GitHub username:
 
 ```bash
-# Find and replace [USERNAME] with your actual GitHub username
-find . -type f -name "*.md" -exec sed -i 's/\[USERNAME\]/your-actual-username/g' {} +
-find examples -type f -name "*.html" -exec sed -i 's/\[USERNAME\]/your-actual-username/g' {} +
+# All USERNAME placeholders have been replaced with: amitrajputfff
+# Repository: https://github.com/amitrajputfff/voice-agent
 ```
 
 ## Future Releases
@@ -286,7 +285,7 @@ jsDelivr will automatically pick up new releases within minutes!
 
 ### CDN not updating
 - Wait 5-10 minutes after release
-- Try purging cache: `https://purge.jsdelivr.net/gh/[USERNAME]/voice-widget@1.0.0/dist/voice-widget.min.js`
+- Try purging cache: `https://purge.jsdelivr.net/gh/amitrajputfff/voice-agent@1.0.0/dist/voice-widget.min.js`
 
 ### 404 errors
 - Ensure repository is public
