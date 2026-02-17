@@ -115,35 +115,39 @@
   </div>
 
   <!-- ============================================ -->
-  <!-- LIAPLUS VOICE NAVIGATION CDN -->
+  <!-- LIAPLUS VOICE NAVIGATION WIDGET -->
   <!-- ============================================ -->
   
-  <!-- Step 1: Include the CDN script -->
-  <script src="https://cdn.liaplus.com/voice-navigation-dynamic.js"></script>
+  <!-- Step 1: Include CSS -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/amitrajputfff/voice-agent@1.0.0/dist/voice-widget.css">
   
-  <!-- Step 2: Initialize (no credentials needed!) -->
+  <!-- Step 2: Include JavaScript -->
+  <script src="https://cdn.jsdelivr.net/gh/amitrajputfff/voice-agent@1.0.0/dist/voice-widget.min.js"></script>
+  
+  <!-- Step 3: Initialize (no credentials needed!) -->
   <script>
     // Simple initialization - all credentials handled server-side
     LiaPlusVoice.init({
-      // Optional: Override API base URL (default: https://liaplus.com/api)
+      // Uses hosted API at liaplus.com
       apiBase: 'https://liaplus.com/api',
       
-      // Optional: Language (default: en-US)
-      language: 'en-US',  // or 'hi-IN' for Hindi
+      // Language (en-US or hi-IN)
+      language: 'en-US',
       
-      // Optional: Auto-start on page load (default: true)
-      autoStart: true,
+      // Auto-start on page load (optional)
+      autoStart: false,
       
-      // Optional: Enable debug logging (default: true)
+      // Enable debug logging (optional)
       debug: true
     });
     
     // Or even simpler - use all defaults:
-    // LiaPlusVoice.init();
+    // LiaPlusVoice.init({ apiBase: 'https://liaplus.com/api' });
     
     // Optional: Programmatic control
     // LiaPlusVoice.start();  // Start listening
     // LiaPlusVoice.stop();   // Stop listening
+    // LiaPlusVoice.toggle(); // Toggle listening
     // LiaPlusVoice.analyzePage(); // Re-analyze page structure
   </script>
 
