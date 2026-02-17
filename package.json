@@ -1,6 +1,6 @@
 {
   "name": "@liaplus/voice-widget-cdn",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "LiaPlus Voice Navigation Widget - CDN distributable widget",
   "main": "dist/voice-widget.js",
   "scripts": {

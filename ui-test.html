@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>UI Test - LiaPlus Voice Widget</title>
+    <style>
+        body {
+            font-family: system-ui, -apple-system, sans-serif;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 40px 20px;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+        .test-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            margin: 20px 0;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+        h1 { color: #667eea; margin-bottom: 10px; }
+        .status { 
+            padding: 15px;
+            background: #f0f9ff;
+            border-left: 4px solid #0284c7;
+            margin: 20px 0;
+            border-radius: 4px;
+        }
+        .success { background: #f0fdf4; border-left-color: #16a34a; }
+        code {
+            background: #f3f4f6;
+            padding: 2px 6px;
+            border-radius: 3px;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="test-card">
+        <h1>🎤 LiaPlus Voice Widget - UI Test</h1>
+        <p style="color: #666; font-size: 18px;">Testing the latest deployed version from jsDelivr CDN</p>
+        
+        <div class="status success">
+            <strong>✅ CDN Status: LIVE</strong><br>
+            Loading from: <code>https://cdn.jsdelivr.net/gh/amitrajputfff/voice-agent@1.0.0/</code>
+        </div>
+
+        <h2>What to Test:</h2>
+        <ol style="line-height: 2;">
+            <li><strong>Widget Position:</strong> Should be bottom-left on mobile, top-right on desktop</li>
+            <li><strong>Button Style:</strong> Circular with accessibility icon</li>
+            <li><strong>Listening State:</strong> Purple background when active with pulse animation</li>
+            <li><strong>Overlay:</strong> "Ask Me Anything" should appear with gradient background</li>
+            <li><strong>Commands List:</strong> Shows example commands when clicked</li>
+            <li><strong>Settings Panel:</strong> Language and voice feedback toggles</li>
+        </ol>
+
+        <h2>Try These Commands:</h2>
+        <ul style="list-style: none; padding: 0; line-height: 2.5;">
+            <li>🗣️ "Scroll down"</li>
+            <li>🗣️ "Go to top"</li>
+            <li>🗣️ "Tell me about this page"</li>
+            <li>🗣️ "What can you do?"</li>
+        </ul>
+    </div>
+
+    <div class="test-card">
+        <h2>Form Test</h2>
+        <p>Try voice commands like: "Fill my name as John Smith"</p>
+        <form style="display: flex; flex-direction: column; gap: 15px; margin-top: 20px;">
+            <div>
+                <label style="display: block; margin-bottom: 5px; font-weight: 600;">Name</label>
+                <input type="text" id="name" placeholder="Your name" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+            </div>
+            <div>
+                <label style="display: block; margin-bottom: 5px; font-weight: 600;">Email</label>
+                <input type="email" id="email" placeholder="your@email.com" style="width: 100%; padding: 10px; border: 1px solid #ddd; border-radius: 4px;">
+            </div>
+            <button type="submit" style="background: #667eea; color: white; border: none; padding: 12px; border-radius: 4px; font-size: 16px; cursor: pointer;">Submit</button>
+        </form>
+    </div>
+
+    <!-- LiaPlus Voice Widget - Latest from CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/amitrajputfff/voice-agent@1.0.0/dist/voice-widget.css">
+    <script src="https://cdn.jsdelivr.net/gh/amitrajputfff/voice-agent@1.0.0/dist/voice-widget.min.js"></script>
+    <script>
+        console.log('🎤 Initializing LiaPlus Voice Widget...');
+        
+        LiaPlusVoice.init({
+            apiBase: 'https://liaplus.com/api',
+            language: 'en-US',
+            autoStart: false,
+            debug: true
+        });
+
+        console.log('✅ Widget initialized!');
+        console.log('Widget instance:', LiaPlusVoice.getInstance());
+    </script>
+</body>
+</html>
