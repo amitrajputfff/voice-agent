@@ -153,7 +153,7 @@ export class UIComponents {
     if (!showSettings) return null;
     
     const panel = document.createElement('div');
-    panel.className = 'absolute bottom-full mb-2 sm:top-full sm:bottom-auto sm:mt-2 sm:mb-0 right-0 left-0 sm:left-auto bg-background/95 backdrop-blur-sm border rounded-lg shadow-xl min-w-[250px] sm:min-w-[280px] max-w-[calc(100vw-2rem)] sm:max-w-[320px] z-50 animate-in slide-in-from-bottom sm:slide-in-from-top-2';
+    panel.className = 'absolute bottom-full mb-2 sm:top-full sm:bottom-auto sm:mt-2 sm:mb-0 right-0 left-0 sm:left-auto bg-background border rounded-lg shadow-xl min-w-[250px] sm:min-w-[280px] max-w-[calc(100vw-2rem)] sm:max-w-[320px] z-50 animate-in slide-in-from-bottom sm:slide-in-from-top-2';
     
     const isHindi = language === 'hi-IN';
     
@@ -336,7 +336,7 @@ export class UIComponents {
         ];
     
     const overlay = document.createElement('div');
-    overlay.className = 'fixed left-4 right-4 bottom-20 sm:inset-auto sm:top-20 sm:right-6 lg:right-20 w-auto sm:w-[320px] lg:w-[360px] max-h-[50vh] sm:max-h-[calc(100vh-120px)] bg-background/95 backdrop-blur-md border shadow-2xl rounded-xl z-40 animate-in slide-in-from-bottom sm:slide-in-from-left duration-300 flex flex-col overflow-hidden';
+    overlay.className = 'fixed left-4 right-4 bottom-20 sm:inset-auto sm:top-20 sm:right-6 lg:right-20 w-auto sm:w-[380px] lg:w-[420px] max-h-[50vh] sm:max-h-[calc(100vh-120px)] bg-background border shadow-2xl rounded-xl z-40 animate-in slide-in-from-bottom sm:slide-in-from-left duration-300 flex flex-col overflow-hidden';
     
     overlay.innerHTML = `
       <div class="flex items-center justify-between p-2.5 sm:p-3 border-b bg-gradient-to-r from-purple-50 to-pink-50 dark:from-purple-900/20 dark:to-pink-900/20 flex-shrink-0">
