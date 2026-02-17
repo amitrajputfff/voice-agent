@@ -21,8 +21,8 @@ AI-powered voice navigation widget that works on any website. Enable hands-free 
 ### 3-Line Integration
 
 ```html
-<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/amitrajputfff/voice-agent@1.0.0/dist/voice-widget.css">
-<script src="https://cdn.jsdelivr.net/gh/amitrajputfff/voice-agent@1.0.0/dist/voice-widget.min.js"></script>
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/amitrajputfff/voice-agent@1.0.1/dist/voice-widget.css">
+<script src="https://cdn.jsdelivr.net/gh/amitrajputfff/voice-agent@1.0.1/dist/voice-widget.min.js"></script>
 <script>
   LiaPlusVoice.init({ apiBase: 'https://liaplus.com/api' });
 </script>

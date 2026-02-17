@@ -5,6 +5,18 @@ All notable changes to the LiaPlus Voice Navigation Widget will be documented in
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.0.1] - 2026-02-17
+
+### Fixed
+- Enhanced "Ask Me Anything" panel UI styling to match design specifications exactly
+- Added sparkle icon to panel header for better visual consistency
+- Improved responsive design and spacing across all UI components
+- Fixed UI rendering issues on different screen sizes
+
+### Changed
+- Updated CDN deployment to include latest UI improvements
+- Improved accessibility icon animations and visual feedback
+
 ## [1.0.0] - 2026-02-17
 
 ### Added
