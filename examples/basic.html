@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LiaPlus Voice Widget - Basic Example</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #667eea;
+      margin-bottom: 0.5rem;
+    }
+    .subtitle {
+      color: #6b7280;
+      margin-bottom: 2rem;
+    }
+    .card {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .command-example {
+      background: #e8f4f8;
+      padding: 15px;
+      border-left: 4px solid #667eea;
+      margin: 10px 0;
+    }
+    code {
+      background: #f0f0f0;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 14px;
+    }
+    ul {
+      list-style: none;
+      padding-left: 0;
+    }
+    li:before {
+      content: "🎤 ";
+      margin-right: 8px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎤 LiaPlus Voice Navigation</h1>
+  <p class="subtitle">Simple 3-line integration</p>
+  
+  <div class="card">
+    <h2>How to Use</h2>
+    <ol>
+      <li>Click the 🎤 button in the bottom-left corner (top-right on desktop)</li>
+      <li>Allow microphone access when prompted</li>
+      <li>Start speaking your commands!</li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>Try These Commands</h2>
+    <div class="command-example">
+      <strong>Navigation:</strong>
+      <ul>
+        <li>"Scroll down"</li>
+        <li>"Go to the top"</li>
+        <li>"Scroll to the bottom"</li>
+      </ul>
+    </div>
+    
+    <div class="command-example">
+      <strong>Content:</strong>
+      <ul>
+        <li>"Read the page"</li>
+        <li>"Stop reading"</li>
+      </ul>
+    </div>
+    
+    <div class="command-example">
+      <strong>Browser:</strong>
+      <ul>
+        <li>"Go back"</li>
+        <li>"Refresh the page"</li>
+        <li>"Zoom in"</li>
+        <li>"Reset zoom"</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Features</h2>
+    <ul style="list-style: disc; padding-left: 20px;">
+      <li style="margin: 10px 0;"><strong>AI-Powered:</strong> Understands natural language, not just keywords</li>
+      <li style="margin: 10px 0;"><strong>Multi-language:</strong> Supports English and Hindi</li>
+      <li style="margin: 10px 0;"><strong>Dynamic DOM Analysis:</strong> Automatically detects forms, buttons, and links</li>
+      <li style="margin: 10px 0;"><strong>Voice Feedback:</strong> Speaks responses back to you</li>
+      <li style="margin: 10px 0;"><strong>Persistent State:</strong> Remembers your settings across sessions</li>
+    </ul>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- LIAPLUS VOICE NAVIGATION WIDGET -->
+  <!-- ============================================ -->
+  
+  <!-- Step 1: Include CSS -->
+  <link rel="stylesheet" href="../dist/voice-widget.css">
+  
+  <!-- Step 2: Include JavaScript -->
+  <script src="../dist/voice-widget.min.js"></script>
+  
+  <!-- Step 3: Initialize -->
+  <script>
+    // Simple initialization with default settings
+    LiaPlusVoice.init({
+      // Uses hosted API at liaplus.com (no credentials needed!)
+      apiBase: 'https://liaplus.com/api',
+      
+      // Language (en-US or hi-IN)
+      language: 'en-US',
+      
+      // Auto-start listening on page load (optional)
+      autoStart: false,
+      
+      // Enable debug logs in console (optional)
+      debug: true
+    });
+    
+    // That's it! The widget is now active.
+    // Click the floating button to start voice navigation.
+  </script>
+</body>
+</html>

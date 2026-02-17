@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LiaPlus Voice Navigation - Example Usage</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      line-height: 1.6;
+    }
+    h1 { color: #667eea; }
+    .card {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+    }
+    label {
+      font-weight: 600;
+      display: block;
+      margin-bottom: 5px;
+    }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+    button {
+      background: #667eea;
+      color: white;
+      border: none;
+      padding: 12px 24px;
+      border-radius: 4px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #5568d3;
+    }
+    .commands {
+      background: #e8f4f8;
+      padding: 15px;
+      border-left: 4px solid #667eea;
+    }
+    .commands ul {
+      margin: 10px 0;
+      padding-left: 20px;
+    }
+    code {
+      background: #f0f0f0;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 14px;
+    }
+  </style>
+</head>
+<body>
+  <h1>🎤 LiaPlus Voice Navigation - Demo</h1>
+  
+  <div class="card">
+    <h2>Try Voice Commands!</h2>
+    <div class="commands">
+      <p><strong>Say these commands:</strong></p>
+      <ul>
+        <li>"Fill my name as John Smith"</li>
+        <li>"Enter email as john@example.com"</li>
+        <li>"Fill message as Hello world"</li>
+        <li>"Click submit button"</li>
+        <li>"Scroll down"</li>
+        <li>"Go to top"</li>
+        <li>"Read page"</li>
+      </ul>
+    </div>
+  </div>
+
+  <div class="card">
+    <h2>Contact Form</h2>
+    <p>This form can be filled using voice commands!</p>
+    <form id="contact-form">
+      <div>
+        <label for="name">Name</label>
+        <input type="text" id="name" placeholder="Your name" />
+      </div>
+      <div>
+        <label for="email">Email</label>
+        <input type="email" id="email" placeholder="your@email.com" />
+      </div>
+      <div>
+        <label for="message">Message</label>
+        <textarea id="message" rows="4" placeholder="Your message"></textarea>
+      </div>
+      <button type="submit">Submit</button>
+    </form>
+  </div>
+
+  <div class="card">
+    <h2>How It Works</h2>
+    <ol>
+      <li>Click the 🎤 button in the bottom-right corner</li>
+      <li>Allow microphone access when prompted</li>
+      <li>Start speaking your commands</li>
+      <li>The AI understands and executes your requests</li>
+    </ol>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- LIAPLUS VOICE NAVIGATION CDN -->
+  <!-- ============================================ -->
+  
+  <!-- Step 1: Include the CDN script -->
+  <script src="https://cdn.liaplus.com/voice-navigation-dynamic.js"></script>
+  
+  <!-- Step 2: Initialize (no credentials needed!) -->
+  <script>
+    // Simple initialization - all credentials handled server-side
+    LiaPlusVoice.init({
+      // Optional: Override API base URL (default: https://liaplus.com/api)
+      apiBase: 'https://liaplus.com/api',
+      
+      // Optional: Language (default: en-US)
+      language: 'en-US',  // or 'hi-IN' for Hindi
+      
+      // Optional: Auto-start on page load (default: true)
+      autoStart: true,
+      
+      // Optional: Enable debug logging (default: true)
+      debug: true
+    });
+    
+    // Or even simpler - use all defaults:
+    // LiaPlusVoice.init();
+    
+    // Optional: Programmatic control
+    // LiaPlusVoice.start();  // Start listening
+    // LiaPlusVoice.stop();   // Stop listening
+    // LiaPlusVoice.analyzePage(); // Re-analyze page structure
+  </script>
+
+  <!-- Form submission handler (optional) -->
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', (e) => {
+      e.preventDefault();
+      alert('Form submitted! Check console for values.');
+      const formData = new FormData(e.target);
+      console.log('Form data:', Object.fromEntries(formData));
+    });
+  </script>
+</body>
+</html>

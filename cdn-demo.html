@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LiaPlus Voice Navigation - CDN Demo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+            padding: 20px;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .hero {
+            background: white;
+            border-radius: 20px;
+            padding: 60px 40px;
+            margin-bottom: 40px;
+            box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            -webkit-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 20px;
+        }
+
+        .subtitle {
+            font-size: 1.5rem;
+            color: #666;
+            margin-bottom: 30px;
+        }
+
+        .badge {
+            display: inline-block;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            color: white;
+            padding: 10px 20px;
+            border-radius: 50px;
+            font-weight: 600;
+            margin-bottom: 30px;
+        }
+
+        .content-section {
+            background: white;
+            border-radius: 20px;
+            padding: 40px;
+            margin-bottom: 30px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+        }
+
+        h2 {
+            font-size: 2rem;
+            color: #333;
+            margin-bottom: 20px;
+            border-left: 5px solid #667eea;
+            padding-left: 15px;
+        }
+
+        .feature-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 30px;
+        }
+
+        .feature-card {
+            background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+            padding: 30px;
+            border-radius: 15px;
+            transition: transform 0.3s ease;
+            border: 2px solid #667eea;
+        }
+
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        .feature-card h3 {
+            color: #667eea;
+            margin-bottom: 10px;
+            font-size: 1.3rem;
+        }
+
+        .feature-card .icon {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+        }
+
+        .instructions {
+            background: #fff3cd;
+            border-left: 4px solid #667eea;
+            padding: 20px;
+            border-radius: 8px;
+            margin: 30px 0;
+        }
+
+        .instructions h3 {
+            color: #856404;
+            margin-bottom: 10px;
+        }
+
+        .instructions ul {
+            margin-left: 20px;
+            color: #856404;
+        }
+
+        .instructions li {
+            margin: 8px 0;
+        }
+
+        .command-list {
+            background: #f8f9fa;
+            padding: 20px;
+            border-radius: 10px;
+            margin: 20px 0;
+        }
+
+        .command-item {
+            background: white;
+            padding: 12px 16px;
+            margin: 8px 0;
+            border-radius: 8px;
+            border-left: 4px solid #667eea;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .command-en {
+            font-weight: 600;
+            color: #333;
+        }
+
+        .command-hi {
+            color: #666;
+            font-style: italic;
+        }
+
+        .footer {
+            text-align: center;
+            color: white;
+            padding: 40px 20px;
+            margin-top: 60px;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+        }
+
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .subtitle {
+                font-size: 1.2rem;
+            }
+
+            .hero {
+                padding: 40px 20px;
+            }
+
+            .content-section {
+                padding: 30px 20px;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <div class="hero">
+            <div class="badge">🎤 AI-Powered Voice Navigation - Live CDN Demo</div>
+            <h1>LiaPlus Voice Navigation</h1>
+            <p class="subtitle">Navigate this page with your voice in English and Hindi</p>
+            <p>Click the voice button in the top-right corner (bottom-left on mobile) to get started!</p>
+        </div>
+
+        <div class="content-section">
+            <h2>🚀 Getting Started</h2>
+            <div class="instructions">
+                <h3>How to Use:</h3>
+                <ul>
+                    <li>Click the <strong>accessibility icon</strong> in the top-right corner</li>
+                    <li>Allow microphone access when prompted</li>
+                    <li>Start speaking naturally - the AI understands your commands!</li>
+                    <li>Try: "Scroll down", "Go to top", "Tell me about this page"</li>
+                    <li>Switch between English and Hindi in the settings</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>✨ Features</h2>
+            <div class="feature-grid">
+                <div class="feature-card">
+                    <div class="icon">🌐</div>
+                    <h3>Bilingual Support</h3>
+                    <p>Works seamlessly in both English and Hindi with natural language understanding</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🤖</div>
+                    <h3>AI-Powered</h3>
+                    <p>Powered by Azure OpenAI for intelligent command interpretation</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">📱</div>
+                    <h3>Responsive Design</h3>
+                    <p>Optimized for desktop and mobile devices with adaptive positioning</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">♿</div>
+                    <h3>Accessibility</h3>
+                    <p>Makes websites accessible to everyone, including users with disabilities</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">🎯</div>
+                    <h3>Context-Aware</h3>
+                    <p>Understands page content and provides relevant responses</p>
+                </div>
+                <div class="feature-card">
+                    <div class="icon">⚡</div>
+                    <h3>Fast & Reliable</h3>
+                    <p>Delivered via CloudFront CDN for optimal performance globally</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>🗣️ Voice Commands</h2>
+
+            <h3 style="margin-top: 30px; color: #667eea;">Navigation Commands</h3>
+            <div class="command-list">
+                <div class="command-item">
+                    <span class="command-en">"Go to top"</span>
+                    <span class="command-hi">"ऊपर जाओ"</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-en">"Scroll down"</span>
+                    <span class="command-hi">"नीचे स्क्रॉल करो"</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-en">"Scroll up"</span>
+                    <span class="command-hi">"ऊपर स्क्रॉल करो"</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-en">"Go to bottom"</span>
+                    <span class="command-hi">"नीचे जाओ"</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-en">"Go back"</span>
+                    <span class="command-hi">"वापस जाओ"</span>
+                </div>
+            </div>
+
+            <h3 style="margin-top: 30px; color: #764ba2;">Information Commands</h3>
+            <div class="command-list">
+                <div class="command-item">
+                    <span class="command-en">"Tell me about this page"</span>
+                    <span class="command-hi">"इस पेज के बारे में बताओ"</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-en">"What is LiaPlus?"</span>
+                    <span class="command-hi">"LiaPlus क्या है?"</span>
+                </div>
+                <div class="command-item">
+                    <span class="command-en">"Read this page"</span>
+                    <span class="command-hi">"यह पेज पढ़ो"</span>
+                </div>
+            </div>
+        </div>
+
+        <div class="content-section">
+            <h2>🔧 Technical Details</h2>
+            <p style="margin-bottom: 20px;">This demo uses the LiaPlus Voice Navigation CDN:</p>
+            <ul style="margin: 20px 0 20px 30px; line-height: 2;">
+                <li><strong>CDN URL:</strong> <code>https://d3mvxvuysvssfg.cloudfront.net/voice-navigation.js</code>
+                </li>
+                <li><strong>Speech Recognition:</strong> Azure Cognitive Services (STT)</li>
+                <li><strong>Text-to-Speech:</strong> Azure Neural Voices (Jenny for English, Swara for Hindi)</li>
+                <li><strong>AI Processing:</strong> Azure OpenAI GPT-4</li>
+                <li><strong>Icons:</strong> Lucide Icons with SVG fallbacks</li>
+                <li><strong>Delivery:</strong> AWS CloudFront (Global CDN)</li>
+            </ul>
+        </div>
+
+        <div class="content-section">
+            <h2>📋 Integration Code</h2>
+            <p>Add this to your website before the closing <code>&lt;/body&gt;</code> tag:</p>
+            <pre
+                style="background: #1e1e1e; color: #d4d4d4; padding: 20px; border-radius: 8px; overflow-x: auto; margin-top: 15px;"><code>&lt;!-- LiaPlus Voice Navigation Integration --&gt;
+
+&lt;!-- Lucide Icons (optional) --&gt;
+&lt;script src="https://unpkg.com/lucide@latest"&gt;&lt;/script&gt;
+
+&lt;!-- Microsoft Cognitive Services Speech SDK --&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/microsoft-cognitiveservices-speech-sdk@latest/distrib/browser/microsoft.cognitiveservices.speech.sdk.bundle.js"&gt;&lt;/script&gt;
+
+&lt;!-- LiaPlus Voice Navigation --&gt;
+&lt;script src="https://d3mvxvuysvssfg.cloudfront.net/voice-navigation.js"&gt;&lt;/script&gt;</code></pre>
+        </div>
+
+        <div class="footer">
+            <h3>🎤 Try the Voice Navigation Now!</h3>
+            <p>Click the button in the top-right corner and start speaking</p>
+            <p style="margin-top: 20px; opacity: 0.9;">Powered by LiaPlus AI • Azure Speech Services • Azure OpenAI</p>
+            <p style="margin-top: 10px; opacity: 0.9;">CDN: AWS CloudFront • Version 1.1.0</p>
+        </div>
+    </div>
+
+    <!-- LiaPlus Voice Navigation Integration -->
+    <!-- Add these scripts before the closing </body> tag -->
+
+    <!-- Lucide Icons (optional, provides cleaner icon rendering) -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+
+    <!-- Microsoft Cognitive Services Speech SDK -->
+    <script
+        src="https://cdn.jsdelivr.net/npm/microsoft-cognitiveservices-speech-sdk@latest/distrib/browser/microsoft.cognitiveservices.speech.sdk.bundle.js"></script>
+
+    <!-- LiaPlus Voice Navigation -->
+    <script src="https://d3mvxvuysvssfg.cloudfront.net/voice-navigation.js"></script>
+</body>
+
+</html>

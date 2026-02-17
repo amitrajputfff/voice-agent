@@ -1,0 +1,284 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LiaPlus Voice Widget - Advanced Configuration</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #667eea;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+      margin: 20px 0;
+    }
+    .card {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 20px;
+    }
+    .card h3 {
+      margin-top: 0;
+      color: #667eea;
+    }
+    button {
+      background: #667eea;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      border-radius: 4px;
+      cursor: pointer;
+      margin: 5px;
+    }
+    button:hover {
+      background: #5568d3;
+    }
+    .controls {
+      background: #fff;
+      padding: 20px;
+      border-radius: 8px;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+      margin: 20px 0;
+    }
+    pre {
+      background: #2d3748;
+      color: #f7fafc;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+      font-size: 13px;
+    }
+    .status {
+      padding: 10px;
+      border-radius: 4px;
+      margin: 10px 0;
+    }
+    .status.active {
+      background: #d4edda;
+      color: #155724;
+    }
+    .status.inactive {
+      background: #f8d7da;
+      color: #721c24;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin: 20px 0;
+    }
+    th, td {
+      padding: 12px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+    th {
+      background-color: #667eea;
+      color: white;
+    }
+  </style>
+</head>
+<body>
+  <h1>⚙️ Advanced Configuration & API Reference</h1>
+  
+  <div class="controls">
+    <h2>Widget Controls</h2>
+    <button onclick="LiaPlusVoice.start()">Start Listening</button>
+    <button onclick="LiaPlusVoice.stop()">Stop Listening</button>
+    <button onclick="LiaPlusVoice.toggle()">Toggle</button>
+    <button onclick="LiaPlusVoice.analyzePage()">Re-analyze Page</button>
+    <button onclick="showState()">Show State</button>
+    <button onclick="changeLanguage('hi-IN')">Switch to Hindi</button>
+    <button onclick="changeLanguage('en-US')">Switch to English</button>
+    <button onclick="LiaPlusVoice.destroy()">Destroy Widget</button>
+    <div id="status" class="status inactive">Widget Status: Not initialized</div>
+  </div>
+
+  <div class="grid">
+    <div class="card">
+      <h3>🎯 Configuration Options</h3>
+      <table>
+        <tr>
+          <th>Option</th>
+          <th>Default</th>
+          <th>Description</th>
+        </tr>
+        <tr>
+          <td><code>apiBase</code></td>
+          <td><code>'https://liaplus.com/api'</code></td>
+          <td>Base URL for hosted API</td>
+        </tr>
+        <tr>
+          <td><code>mode</code></td>
+          <td><code>'hosted'</code></td>
+          <td>'hosted' or 'custom'</td>
+        </tr>
+        <tr>
+          <td><code>language</code></td>
+          <td><code>'en-US'</code></td>
+          <td>'en-US' or 'hi-IN'</td>
+        </tr>
+        <tr>
+          <td><code>autoStart</code></td>
+          <td><code>false</code></td>
+          <td>Auto-start on page load</td>
+        </tr>
+        <tr>
+          <td><code>debug</code></td>
+          <td><code>true</code></td>
+          <td>Enable console logging</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h3>📚 API Methods</h3>
+      <pre><code>// Initialize widget
+LiaPlusVoice.init(config)
+
+// Control listening
+LiaPlusVoice.start()
+LiaPlusVoice.stop()
+LiaPlusVoice.toggle()
+
+// Utility methods
+LiaPlusVoice.analyzePage()
+LiaPlusVoice.updateConfig(newConfig)
+LiaPlusVoice.destroy()
+
+// Get information
+LiaPlusVoice.getState()
+LiaPlusVoice.getInstance()</code></pre>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>🔊 Supported Voice Commands</h3>
+    <div class="grid">
+      <div>
+        <h4>Navigation</h4>
+        <ul>
+          <li>"Scroll down/up"</li>
+          <li>"Go to top/bottom"</li>
+          <li>"Go back/forward"</li>
+          <li>"Refresh page"</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Zoom</h4>
+        <ul>
+          <li>"Zoom in/out"</li>
+          <li>"Reset zoom"</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Forms</h4>
+        <ul>
+          <li>"Fill my email as john@example.com"</li>
+          <li>"Enter name as John Smith"</li>
+          <li>"Click submit button"</li>
+        </ul>
+      </div>
+      <div>
+        <h4>Content</h4>
+        <ul>
+          <li>"Read the page"</li>
+          <li>"Stop reading"</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="card">
+    <h3>🎨 Custom Styling</h3>
+    <p>Override widget styles with CSS:</p>
+    <pre><code>/* Change button position */
+.liaplus-voice-widget-root .fixed {
+  bottom: 20px !important;
+  right: 20px !important;
+}
+
+/* Change colors */
+.liaplus-voice-widget-root .bg-purple-100 {
+  background-color: #your-color !important;
+}
+
+/* Hide commands overlay */
+.liaplus-voice-widget-root .commands-overlay {
+  display: none !important;
+}</code></pre>
+  </div>
+
+  <div class="card">
+    <h3>🔧 Event Handling</h3>
+    <p>Access the widget instance for advanced control:</p>
+    <pre><code>const widget = LiaPlusVoice.getInstance();
+
+// Listen for state changes
+const originalSetState = widget.setState.bind(widget);
+widget.setState = function(updates) {
+  console.log('State update:', updates);
+  originalSetState(updates);
+  
+  // Your custom logic here
+  if (updates.isListening !== undefined) {
+    console.log('Listening state changed:', updates.isListening);
+  }
+};</code></pre>
+  </div>
+
+  <!-- WIDGET -->
+  <link rel="stylesheet" href="../dist/voice-widget.css">
+  <script src="../dist/voice-widget.min.js"></script>
+  
+  <script>
+    // Initialize with all options
+    LiaPlusVoice.init({
+      apiBase: 'https://liaplus.com/api',
+      mode: 'hosted',
+      language: 'en-US',
+      autoStart: false,
+      debug: true
+    });
+
+    // Update status
+    function updateStatus() {
+      const state = LiaPlusVoice.getState();
+      const statusDiv = document.getElementById('status');
+      if (state && state.isListening) {
+        statusDiv.className = 'status active';
+        statusDiv.textContent = `Widget Status: Listening (${state.language})`;
+      } else if (state) {
+        statusDiv.className = 'status inactive';
+        statusDiv.textContent = `Widget Status: Ready (${state.language})`;
+      }
+    }
+
+    // Show current state
+    function showState() {
+      const state = LiaPlusVoice.getState();
+      console.log('Current State:', state);
+      alert(JSON.stringify(state, null, 2));
+    }
+
+    // Change language
+    function changeLanguage(lang) {
+      LiaPlusVoice.updateConfig({ language: lang });
+      updateStatus();
+      alert(`Language changed to ${lang}`);
+    }
+
+    // Update status every second
+    setInterval(updateStatus, 1000);
+    updateStatus();
+  </script>
+</body>
+</html>

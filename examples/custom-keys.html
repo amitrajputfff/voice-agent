@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>LiaPlus Voice Widget - Custom Azure Credentials</title>
+  <style>
+    body {
+      font-family: system-ui, -apple-system, sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 40px 20px;
+      line-height: 1.6;
+    }
+    h1 {
+      color: #667eea;
+      margin-bottom: 0.5rem;
+    }
+    .subtitle {
+      color: #6b7280;
+      margin-bottom: 2rem;
+    }
+    .card {
+      background: #f8f9fa;
+      border-radius: 8px;
+      padding: 20px;
+      margin: 20px 0;
+    }
+    .warning {
+      background: #fff3cd;
+      border-left: 4px solid #ffc107;
+      padding: 15px;
+      margin: 20px 0;
+    }
+    code {
+      background: #f0f0f0;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 14px;
+    }
+    pre {
+      background: #2d3748;
+      color: #f7fafc;
+      padding: 15px;
+      border-radius: 8px;
+      overflow-x: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>🔑 Custom Azure Credentials</h1>
+  <p class="subtitle">Use your own Azure OpenAI and Speech Services</p>
+  
+  <div class="warning">
+    <strong>⚠️ Security Warning:</strong> Never expose your API keys in production. 
+    This mode is for development/testing or when you have a secure backend proxy.
+  </div>
+
+  <div class="card">
+    <h2>What You Need</h2>
+    <ol>
+      <li><strong>Azure OpenAI Service:</strong>
+        <ul>
+          <li>Endpoint URL (e.g., <code>https://your-resource.openai.azure.com/</code>)</li>
+          <li>API Key</li>
+          <li>Deployment name (e.g., <code>gpt-4o</code>)</li>
+        </ul>
+      </li>
+      <li><strong>Azure Speech Services:</strong>
+        <ul>
+          <li>Subscription Key</li>
+          <li>Region (e.g., <code>eastus</code>)</li>
+        </ul>
+      </li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>Setup Instructions</h2>
+    <p>Replace the placeholder values in the code below with your actual Azure credentials:</p>
+    <pre><code>LiaPlusVoice.init({
+  mode: 'custom',
+  azureOpenAI: {
+    endpoint: 'https://YOUR-RESOURCE.openai.azure.com/',
+    apiKey: 'YOUR_OPENAI_API_KEY',
+    deployment: 'gpt-4o'
+  },
+  azureSpeech: {
+    key: 'YOUR_SPEECH_API_KEY',
+    region: 'eastus'
+  },
+  language: 'en-US'
+});</code></pre>
+  </div>
+
+  <div class="card">
+    <h2>Use Cases for Custom Mode</h2>
+    <ul>
+      <li><strong>Development/Testing:</strong> Test with your own Azure resources</li>
+      <li><strong>Enterprise:</strong> Use your organization's Azure subscriptions</li>
+      <li><strong>Custom Regions:</strong> Deploy in specific Azure regions for compliance</li>
+      <li><strong>Cost Control:</strong> Monitor and control your own Azure usage</li>
+    </ul>
+  </div>
+
+  <!-- ============================================ -->
+  <!-- LIAPLUS VOICE NAVIGATION WIDGET -->
+  <!-- ============================================ -->
+  
+  <link rel="stylesheet" href="../dist/voice-widget.css">
+  <script src="../dist/voice-widget.min.js"></script>
+  
+  <script>
+    // Custom credentials mode
+    LiaPlusVoice.init({
+      mode: 'custom', // Use custom Azure credentials
+      
+      // Azure OpenAI configuration
+      azureOpenAI: {
+        endpoint: 'https://YOUR-RESOURCE.openai.azure.com/',
+        apiKey: 'YOUR_OPENAI_API_KEY',
+        deployment: 'gpt-4o' // or 'gpt-4', 'gpt-35-turbo', etc.
+      },
+      
+      // Azure Speech Services configuration
+      azureSpeech: {
+        key: 'YOUR_SPEECH_API_KEY',
+        region: 'eastus' // or your Azure region
+      },
+      
+      // Widget configuration
+      language: 'en-US', // or 'hi-IN' for Hindi
+      autoStart: false,
+      debug: true
+    });
+    
+    // Note: In production, NEVER expose API keys in client-side code.
+    // Instead, create a secure backend proxy that handles Azure API calls.
+  </script>
+</body>
+</html>

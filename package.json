@@ -1,0 +1,36 @@
+{
+  "name": "@liaplus/voice-widget-cdn",
+  "version": "1.0.0",
+  "description": "LiaPlus Voice Navigation Widget - CDN distributable widget",
+  "main": "dist/voice-widget.js",
+  "scripts": {
+    "build": "npm run build:dev && npm run build:prod",
+    "build:dev": "webpack --mode development --config webpack.config.js",
+    "build:prod": "webpack --mode production --config webpack.config.js",
+    "watch": "webpack --mode development --watch --config webpack.config.js",
+    "clean": "rm -rf dist/*"
+  },
+  "keywords": [
+    "voice",
+    "navigation",
+    "accessibility",
+    "ai",
+    "cdn",
+    "widget"
+  ],
+  "author": "LiaPlus",
+  "license": "MIT",
+  "devDependencies": {
+    "@babel/core": "^7.23.0",
+    "@babel/preset-env": "^7.23.0",
+    "babel-loader": "^9.1.3",
+    "css-loader": "^6.8.1",
+    "mini-css-extract-plugin": "^2.7.6",
+    "terser-webpack-plugin": "^5.3.9",
+    "webpack": "^5.89.0",
+    "webpack-cli": "^5.1.4"
+  },
+  "dependencies": {
+    "microsoft-cognitiveservices-speech-sdk": "^1.47.0"
+  }
+}

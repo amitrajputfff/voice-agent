@@ -1,0 +1,60 @@
+{
+  "name": "@amittrrajputtt/voice-navigation-ai",
+  "version": "1.0.1",
+  "description": "Universal AI-powered voice navigation for any website. No configuration required.",
+  "main": "dist/voice-navigation.js",
+  "module": "dist/voice-navigation.esm.js",
+  "types": "dist/voice-navigation.d.ts",
+  "files": [
+    "dist",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "npm run build:umd && npm run build:esm",
+    "build:umd": "cp ../voice-navigation-dynamic.js dist/voice-navigation.js",
+    "build:esm": "cp ../voice-navigation-dynamic.js dist/voice-navigation.esm.js",
+    "prepublishOnly": "npm run build",
+    "test": "echo \"No tests yet\" && exit 0"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/amittrrajputtt/voice-navigation-ai.git"
+  },
+  "keywords": [
+    "voice",
+    "navigation",
+    "accessibility",
+    "a11y",
+    "speech",
+    "ai",
+    "voice-control",
+    "hands-free",
+    "azure-speech",
+    "openai",
+    "form-filling",
+    "voice-assistant",
+    "web-accessibility",
+    "voice-commands",
+    "speech-recognition"
+  ],
+  "author": {
+    "name": "LiaPlus Technologies",
+    "email": "support@liaplus.com",
+    "url": "https://liaplus.com"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/amittrrajputtt/voice-navigation-ai/issues"
+  },
+  "homepage": "https://liaplus.com",
+  "publishConfig": {
+    "access": "public",
+    "registry": "https://registry.npmjs.org/"
+  },
+  "engines": {
+    "node": ">=14.0.0"
+  },
+  "peerDependencies": {},
+  "devDependencies": {}
+}
